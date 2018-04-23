@@ -23,7 +23,7 @@ public class ListarArbolDirectorios {
     	
     	//DetectarNuevosArchivosEnDirectorio();
     	
-    	//ListarMientrasDetectaNuevosArchivosEnDirectorio();
+    	ListarMientrasDetectaNuevosArchivosEnDirectorio(new File("C:/Users/Juan Pablo Abad/SO"));
     }
  
     public static void ListarDirectorios(File dir) {
@@ -149,7 +149,7 @@ public class ListarArbolDirectorios {
     //https://stackoverflow.com/questions/13998379/directory-watching-for-changes-in-java
     //https://docs.oracle.com/javase/tutorial/essential/io/notification.html
     //https://docs.oracle.com/javase/tutorial/essential/io/examples/WatchDir.java
-    public static void ListarMientrasDetectaNuevosArchivosEnDirectorio()throws IOException{
+    public static void ListarMientrasDetectaNuevosArchivosEnDirectorio(File directorio) throws FileNotFoundException, IOException{
     	Path dir = Paths.get("F:/prueba/");
         WatchService service = FileSystems.getDefault().newWatchService();
         WatchKey key = dir.register(service, ENTRY_CREATE);
